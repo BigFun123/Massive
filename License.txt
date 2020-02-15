@@ -1,0 +1,8 @@
+You may produce your own browsers for the Massive Server without consultation, provided you use the
+Massive Server application.
+
+To modify the Massive network and database protocol, first contact the owner, 
+or discuss on GitHub, as there are likely many dependencies.
+
+Further than that, in the Open World Browser, you may change and make enhancements, use it as a base for your own
+virtual universe browsers that connect to the Massive Network.

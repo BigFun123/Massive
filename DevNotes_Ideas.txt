@@ -1,0 +1,12 @@
+Instance Rendering
+
+pass the flat glInstanceID on to the shader.
+	flat in int InstanceID;
+Switch textures based on lookup array
+
+Firefox causes a spike every 3-5 seconds
+Fix: In about:config, set browser.sessionstore.interval to a large number (it should be 10,000 or 15,000; set it to about 600,000). 
+
+
+Tutorial sites:
+http://ogldev.atspace.co.uk/index.html

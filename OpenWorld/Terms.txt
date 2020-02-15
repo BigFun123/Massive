@@ -1,0 +1,49 @@
+Terms of Service
+
+Terms of Service ("Terms")
+
+Last updated: 2019-02-09
+
+Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the MASSIVE UNIVERSE service and the THIS IS MASSIVE  application (the "Service") operated by BIGFUN ("us", "we", or "our") referred to as The Company.
+
+Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
+
+By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
+
+Termination
+
+We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+
+All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.
+
+
+
+Content
+
+Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material ("Content"). You are responsible for the content you upload. We are in no way responsible for the upload of content by you or others.
+
+Links To Other Web Sites
+
+Our Service may contain links to third-party web sites or services that are not owned or controlled by The Company.
+
+The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that My Company (change this) shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
+
+Changes
+
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+
+Contact Us
+
+If you have any questions about these Terms, please contact us through the application or on our website.
+
+
+Licenses
+
+All software is open source.
+Individual licenses can be found at:
+OpenTK - https://github.com/opentk/opentk
+BulletSharp - https://github.com/AndresTraks/BulletSharp
+NetworkComms - https://github.com/MarcFletcher/NetworkComms.Net
+
+Icons:
+ICONS8 - https://icons8.com/

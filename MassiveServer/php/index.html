@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+    <title>OPEN WORLD LOBBY</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>WorldType</th>
+                <th>IP</th>
+                <th>LastUsed</th>
+                <th>Users</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>WorldType</th>
+                <th>IP</th>
+                <th>LastUsed</th>
+                <th>Users</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        var ReqID = "123";
+        $(document).ready(function () {
+            //$('#example').DataTable();           
+            BindDataTable();
+        });
+
+        var BindDataTable = function () {
+            $("#example").DataTable({
+                "ajax": "./lobby/",
+                "dataSrc":"",
+                "columns": [
+                    { "data": "Name" },
+                    { "data": "WorldType" },
+                    { "data": "IP" },
+                    { "data": "LastUsed" },
+                    { "data": "Users" }
+                ]
+            });
+        }
+
+
+    </script>
+</body>
+</html>

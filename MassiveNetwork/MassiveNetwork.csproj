@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81395F7C-9BEC-4A66-BA15-55BC628A0A82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MassiveNetwork</RootNamespace>
+    <AssemblyName>MassiveNetwork</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'debug64|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\debug64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'debug64|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\debug64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|AnyCPU'">
+    <OutputPath>bin\Release32\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|x86'">
+    <OutputPath>bin\x86\Release32\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>massive_dev_key.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'debug64|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\debug64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|x64'">
+    <OutputPath>bin\x64\Release32\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\packages\protobuf-net.2.3.5\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB.cs" />
+    <Compile Include="MDataTableHelper.cs" />
+    <Compile Include="MServerZone.cs" />
+    <Compile Include="MUserAccount.cs" />
+    <Compile Include="NetMessages\IMSerializable.cs" />
+    <Compile Include="NetMessages\MAdminStatusMessage.cs" />
+    <Compile Include="NetMessages\MChangeAvatarResponse.cs" />
+    <Compile Include="NetMessages\MChangeAvatarRequest.cs" />
+    <Compile Include="NetMessages\MChangeDetailsRequest.cs" />
+    <Compile Include="NetMessages\MChangeDetailsResult.cs" />
+    <Compile Include="NetMessages\MChatMessage.cs" />
+    <Compile Include="NetMessages\MCreateZone.cs" />
+    <Compile Include="NetMessages\MDeleteRequest.cs" />
+    <Compile Include="NetMessages\MLoginMessageRequest.cs" />
+    <Compile Include="NetMessages\MModelURL.cs" />
+    <Compile Include="NetMessages\MNetMessage.cs" />
+    <Compile Include="NetMessages\MPosMessage.cs" />
+    <Compile Include="MServerObject.cs" />
+    <Compile Include="NetMessages\MSpawnMessage.cs" />
+    <Compile Include="NetMessages\MTableMessage.cs" />
+    <Compile Include="NetMessages\MTeleportMessage.cs" />
+    <Compile Include="NetMessages\MTextureMessage.cs" />
+    <Compile Include="NetMessages\MChangeProperty.cs" />
+    <Compile Include="NetworkCommsDotNet\ConnectionInfo.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\ConnectionCreate.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\ConnectionDelegatesHandlers.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\ConnectionIncomingData.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\ConnectionListenerBase.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\ConnectionListeners.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\ConnectionSendClose.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\ConnectionStatic.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\ConnectionType.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\IPConnection.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\SentPacket.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\TCP\SSLOptions.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\TCP\TCPConnection.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\TCP\TCPConnectionListener.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\TCP\TCPConnectionStatic.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\UDP\UDPClientWrapper.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\UDP\UDPConnection.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\UDP\UDPConnectionListener.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\UDP\UDPConnectionStatic.cs" />
+    <Compile Include="NetworkCommsDotNet\Connection\UDP\UDPOptions.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\BinaryFormaterSerializer.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\DataPadder.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\DataProcessor.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\DataSerializer.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\DataSerializerProcessorAttribute.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\DPSManager.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\ExplicitSerializer.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\NullSerializer.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\RijndaelPSKEncrypter.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\Common\CommandLineParser.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\Common\CRC.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\Common\InBuffer.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\Common\OutBuffer.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\LzmaBase.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\LZMACompressor.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\LzmaDecoder.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\LzmaEncoder.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\LZ\LzBinTree.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\LZ\LzInWindow.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\LZ\LzOutWindow.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\RangeCoder\RangeCoder.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\RangeCoder\RangeCoderBit.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\RangeCoder\RangeCoderBitTree.cs" />
+    <Compile Include="NetworkCommsDotNet\DPSBase\SevenZipLZMACompressor\SevenZipHelper.cs" />
+    <Compile Include="NetworkCommsDotNet\Exception.cs" />
+    <Compile Include="NetworkCommsDotNet\NetworkComms.cs" />
+    <Compile Include="NetworkCommsDotNet\Packet.cs" />
+    <Compile Include="NetworkCommsDotNet\PacketHeader.cs" />
+    <Compile Include="NetworkCommsDotNet\Properties\AssemblyInfo.cs" />
+    <Compile Include="NetworkCommsDotNet\ReservedPacketType.cs" />
+    <Compile Include="NetworkCommsDotNet\RuntimeEnvironment.cs" />
+    <Compile Include="NetworkCommsDotNet\SendReceiveOptions.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\Adler32.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\CommsMath.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\CommsThreadPool.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\DOSProtection.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\HostInfo.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\ILogger.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\IPTools.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\LogTools.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\MD5.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\PacketBuilder.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\PacketUnwrappers.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\PeerDiscovery.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\PriorityQueue.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\PriorityQueueItem.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\QueueItemPriority.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\ShortGUID.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\SSLTools.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\StreamTools.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\AddressFamily.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\DateTimeExtenensions.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\EndPoint.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\IPAddress.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\IPEndPoint.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\IPv6Address.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\SocketAddress.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\SocketError.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\SocketException.cs" />
+    <Compile Include="NetworkCommsDotNet\Tools\XPlatformHelper\WaitCallback.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtobufSerializer\ProtobufSerializer.cs" />
+    <Compile Include="QuickLZ.cs" />
+    <Compile Include="UidGen.cs" />
+    <Compile Include="Vector3d_Server.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="massive_dev_key.pfx" />
+    <None Include="NetworkCommsDotNet\networkcomms.net.snk" />
+    <None Include="NetworkCommsDotNet\packages.config" />
+    <None Include="ProtobufSerializer\networkcomms.net.snk" />
+    <None Include="ProtobufSerializer\packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NetworkCommsDotNet\NetworkCommsDotNet.csproj" />
+    <Content Include="ProtobufSerializer\ProtobufSerializer.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProtobufSerializer\Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

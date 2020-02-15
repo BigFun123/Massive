@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F997DFC2-B75C-4871-BEDA-CD4711066019}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Massive2</RootNamespace>
+    <AssemblyName>Massive2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|AnyCPU'">
+    <OutputPath>bin\Release32\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|x86'">
+    <OutputPath>bin\x86\Release32\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|x64'">
+    <OutputPath>bin\x64\Release32\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AssimpNet">
+      <HintPath>..\packages\AssimpNet.3.3.2\lib\net45\AssimpNet.dll</HintPath>
+    </Reference>
+    <Reference Include="BulletSharp">
+      <HintPath>..\dlls\64\BulletSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="irrKlang.NET4, Version=1.0.6617.18810, Culture=neutral, PublicKeyToken=a854741bd80517c7, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\64\irrKlang.NET4.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\64\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Events\StateEvent.cs" />
+    <Compile Include="src\Events\TextEvent.cs" />
+    <Compile Include="src\Events\BooleanEvent.cs" />
+    <Compile Include="src\Events\BookmarkEvent.cs" />
+    <Compile Include="src\Graphics\Character\BoneMatrix.cs" />
+    <Compile Include="src\Graphics\Character\AnimatedVertex.cs" />
+    <Compile Include="src\Graphics\Character\MAnimatedMesh.cs" />
+    <Compile Include="src\Graphics\Character\MAnimationController.cs" />
+    <Compile Include="src\Graphics\Character\MBone.cs" />
+    <Compile Include="src\Graphics\Character\MBoneAnimation.cs" />
+    <Compile Include="src\Graphics\Character\MBoneWeight.cs" />
+    <Compile Include="src\Graphics\Character\MPose.cs" />
+    <Compile Include="src\Graphics\Character\VertexBoneData.cs" />
+    <Compile Include="src\Graphics\Character\MAnimatedModel.cs" />
+    <Compile Include="src\Graphics\MGeomShader.cs" />
+    <Compile Include="src\Graphics\Terrain\MBiome.cs" />
+    <Compile Include="src\Graphics\Terrain\MGrass.cs" />
+    <Compile Include="src\Graphics\Terrain\MGrassPlanter.cs" />
+    <Compile Include="src\Graphics\TexturedVertex.cs" />
+    <Compile Include="src\Modules\Avatar\MAvatarSound.cs" />
+    <Compile Include="src\Modules\GIS\MClimate.cs" />
+    <Compile Include="src\Modules\Widgets\MLinker.cs" />
+    <Compile Include="src\Modules\Widgets\MTeleporter.cs" />
+    <Compile Include="src\MScene.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Graphics\MBoundingBox.cs" />
+    <Compile Include="src\Events\ChangeAvatarEvent.cs" />
+    <Compile Include="src\Events\ChangeDetailsEvent.cs" />
+    <Compile Include="src\Events\ChangeDetailsRequestEvent.cs" />
+    <Compile Include="src\Events\ChangeModeEvent.cs" />
+    <Compile Include="src\Events\ChangePropertyEvent.cs" />
+    <Compile Include="src\Events\ChatEvent.cs" />
+    <Compile Include="src\Events\ClickEvent.cs" />
+    <Compile Include="src\Events\CreateEvent.cs" />
+    <Compile Include="src\Events\CreateObjectRequestEvent.cs" />
+    <Compile Include="src\Events\DeleteEvent.cs" />
+    <Compile Include="src\Events\DeleteRequestEvent.cs" />
+    <Compile Include="src\Events\FocusEvent.cs" />
+    <Compile Include="src\Events\GUIEvent.cs" />
+    <Compile Include="src\Events\KeyboardEvent.cs" />
+    <Compile Include="src\Events\LoggedOutEvent.cs" />
+    <Compile Include="src\Events\MMessageBus.cs" />
+    <Compile Include="src\Events\MouseClickEvent.cs" />
+    <Compile Include="src\Events\MoveEvent.cs" />
+    <Compile Include="src\Events\NavigationEvent.cs" />
+    <Compile Include="src\Events\NetworkStatusEvent.cs" />
+    <Compile Include="src\Events\ObjectSpawnedEvent.cs" />
+    <Compile Include="src\Events\RotationEvent.cs" />
+    <Compile Include="src\Events\RotationRequestEvent.cs" />
+    <Compile Include="src\Events\SelectEvent.cs" />
+    <Compile Include="src\Events\StatusEvent.cs" />
+    <Compile Include="src\Events\TableEvent.cs" />
+    <Compile Include="src\Events\TeleportRequestEvent.cs" />
+    <Compile Include="src\Events\TextureEvent.cs" />
+    <Compile Include="src\Events\TextureRequestEvent.cs" />
+    <Compile Include="src\Events\RenderEvent.cs" />
+    <Compile Include="src\Events\UpdateEvent.cs" />
+    <Compile Include="src\Events\ZoneEvent.cs" />
+    <Compile Include="src\Graphics\Mesh\MRemoteModel.cs" />
+    <Compile Include="src\Graphics\Mesh\MSpherePatch.cs" />
+    <Compile Include="src\Graphics\MFog.cs" />
+    <Compile Include="src\Graphics\MInstanceMesh.cs" />
+    <Compile Include="src\Graphics\Particles\MParticle.cs" />
+    <Compile Include="src\Graphics\Particles\MParticleEmitter.cs" />
+    <Compile Include="src\Graphics\Primitives\MSphere2.cs" />
+    <Compile Include="src\Graphics\Terrain\MForest.cs" />
+    <Compile Include="src\Graphics\Terrain\MGravityIndicator.cs" />
+    <Compile Include="src\Graphics\Terrain\MPlanet.cs" />
+    <Compile Include="src\Graphics\MPointLight.cs" />
+    <Compile Include="src\Graphics\MRenderer.cs" />
+    <Compile Include="src\Graphics\MScreen.cs" />
+    <Compile Include="src\Graphics\Primitives\MGrass.cs" />
+    <Compile Include="src\Graphics\TexturedVertexAnim.cs" />
+    <Compile Include="src\Modules\Audio\MAudioListener.cs" />
+    <Compile Include="src\Modules\Audio\MSound.cs" />
+    <Compile Include="src\Modules\Avatar\IControllerContext.cs" />
+    <Compile Include="src\Modules\Avatar\MFlyBirdController.cs" />
+    <Compile Include="src\Modules\Avatar\MWalkController.cs" />
+    <Compile Include="src\Modules\GIS\MGravityCalculator.cs" />
+    <Compile Include="src\Modules\GIS\MPlanetHandler.cs" />
+    <Compile Include="src\Modules\GIS\MPOI.cs" />
+    <Compile Include="src\Graphics\Terrain\MTerrainBoundary.cs" />
+    <Compile Include="src\Graphics\Terrain\MTerrainHandler.cs" />
+    <Compile Include="src\Graphics\Terrain\MTerrainTile.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\CrsConverter.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\GeoJsonConverter.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\GeometryConverter.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\LineStringEnumerableConverter.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\PointEnumerableConverter.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\PolygonEnumerableConverter.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\PositionConverter.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\PositionEnumerableConverter.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Converters\TypeExtensions.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\CoordinateReferenceSystem\CRSBase.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\CoordinateReferenceSystem\CRSType.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\CoordinateReferenceSystem\DefaultCRS.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\CoordinateReferenceSystem\ICRSObject.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\CoordinateReferenceSystem\LinkedCRS.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\CoordinateReferenceSystem\NamedCRS.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\CoordinateReferenceSystem\UnspecifiedCRS.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\DoubleTenDecimalPlaceComparer.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Feature\Feature.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Feature\FeatureCollection.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\GeoJSONObject.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\GeoJSONObjectType.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\GeometryCollection.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\IGeometryObject.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\IPosition.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\LineString.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\MultiLineString.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\MultiPoint.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\MultiPolygon.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\Point.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\Polygon.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\Geometry\Position.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\IGeoJSONObject.cs" />
+    <Compile Include="src\Graphics\Terrain\TerrainInfo\PositionExtensions.cs" />
+    <Compile Include="src\Modules\Animation\MMoveSync.cs" />
+    <Compile Include="src\Modules\Animation\MTeleportOneShot.cs" />
+    <Compile Include="src\Modules\Avatar\MNPC.cs" />
+    <Compile Include="src\Modules\GIS\MAstroBody.cs" />
+    <Compile Include="src\Modules\Input\MClickHandler.cs" />
+    <Compile Include="src\Modules\Widgets\MDoor.cs" />
+    <Compile Include="src\Modules\Input\MKey.cs" />
+    <Compile Include="src\Network\MZone.cs" />
+    <Compile Include="src\Optimize\Frustrum.cs" />
+    <Compile Include="src\Optimize\MDistanceClipper.cs" />
+    <Compile Include="src\Optimize\MFrustrumCuller.cs" />
+    <Compile Include="src\Physics\MPhysicsCharacter.cs" />
+    <Compile Include="src\Physics\MPhysicsDebug.cs" />
+    <Compile Include="src\Physics\MRaycastTask.cs" />
+    <Compile Include="src\Platform\MFileSystem.cs" />
+    <Compile Include="src\Services\MZoneService.cs" />
+    <Compile Include="src\Settings.cs" />
+    <Compile Include="src\Tools\ConvexDecomposition.cs" />
+    <Compile Include="src\Tools\DataTableTools.cs" />
+    <Compile Include="src\Tools\ImageTools.cs" />
+    <Compile Include="src\Tools\MassiveTools.cs" />
+    <Compile Include="src\Tools\MBackgroundQueue.cs" />
+    <Compile Include="src\Tools\MBarycentric.cs" />
+    <Compile Include="src\Tools\ModelPool.cs" />
+    <Compile Include="src\Tools\MGISTools.cs" />
+    <Compile Include="src\Tools\MPerlin.cs" />
+    <Compile Include="src\Tools\MStateMachine.cs" />
+    <Compile Include="src\Tools\RectD.cs" />
+    <Compile Include="src\UI\MInputBox.cs" />
+    <Compile Include="src\UI\MSplash.cs" />
+    <Compile Include="src\UI\MButton.cs" />
+    <Compile Include="src\UI\MConsole.cs" />
+    <Compile Include="src\UI\MControl.cs" />
+    <Compile Include="src\UI\MGUI.cs" />
+    <Compile Include="src\UI\MPanel.cs" />
+    <Compile Include="src\Helper.cs" />
+    <Compile Include="src\Modules\Animation\MObjectAnimation.cs" />
+    <Compile Include="src\Modules\Audio\MAudioListener2.cs" />
+    <Compile Include="src\Scripting\MScriptHost.cs" />
+    <Compile Include="src\Events\EditFileEvent.cs" />
+    <Compile Include="src\Events\EditMeEvent.cs" />
+    <Compile Include="src\Events\ErrorEvent.cs" />
+    <Compile Include="src\Events\GraphChangedEvent.cs" />
+    <Compile Include="src\Events\InfoEvent.cs" />
+    <Compile Include="src\Modules\Avatar\MAvatar.cs" />
+    <Compile Include="src\Globals.cs" />
+    <Compile Include="src\Graphics\DebugQuad.cs" />
+    <Compile Include="src\Graphics\MCamera.cs" />
+    <Compile Include="src\Graphics\Primitives\MCube.cs" />
+    <Compile Include="src\Graphics\Mesh\MMesh.cs" />
+    <Compile Include="src\Graphics\Mesh\MVertex.cs" />
+    <Compile Include="src\Graphics\MLight.cs" />
+    <Compile Include="src\Graphics\MMaterial.cs" />
+    <Compile Include="src\Graphics\Mesh\MModel.cs" />
+    <Compile Include="src\Graphics\MSceneObject.cs" />
+    <Compile Include="src\Graphics\MShader.cs" />
+    <Compile Include="src\Graphics\Primitives\MPlane.cs" />
+    <Compile Include="src\Graphics\Primitives\MSphere.cs" />
+    <Compile Include="src\Graphics\MTexture.cs" />
+    <Compile Include="src\Graphics\RenderSettings.cs" />
+    <Compile Include="src\Graphics\MSky.cs" />
+    <Compile Include="src\Graphics\MTriangle.cs" />
+    <Compile Include="src\Modules\Audio\MSound2.cs" />
+    <Compile Include="src\Modules\MObject.cs" />
+    <Compile Include="src\Modules\MTransform.cs" />
+    <Compile Include="src\Physics\MPhysicsObject.cs" />
+    <Compile Include="src\Network\MassiveNetwork.cs" />
+    <Compile Include="src\Network\MNetworkObject.cs" />
+    <Compile Include="src\Physics\MPhysics.cs" />
+    <Compile Include="src\Scripting\MPayload.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="src\Scripting\MSystemScript.cs" />
+    <Compile Include="src\Time.cs" />
+    <Compile Include="src\Tools\Extensions.cs" />
+    <Compile Include="src\Tools\MScreenPick.cs" />
+    <Compile Include="src\Tools\TexturePool.cs" />
+    <Compile Include="src\UI\MText.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MassiveNetwork\MassiveNetwork.csproj">
+      <Project>{81395f7c-9bec-4a66-ba15-55bc628a0a82}</Project>
+      <Name>MassiveNetwork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="OpenTK.dll.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

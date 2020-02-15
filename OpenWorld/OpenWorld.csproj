@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DC73A3F-0F0D-4A7A-946F-EEAFFF02BCE0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OpenWorld</RootNamespace>
+    <AssemblyName>OpenWorld</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Deploy\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>sun.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\dlls\64\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\dlls\64\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>..\dlls\64\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\64\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Controllers\BookmarkController.cs" />
+    <Compile Include="src\Controllers\COpenWorld.cs" />
+    <Compile Include="src\Controllers\LobbyController.cs" />
+    <Compile Include="src\Controllers\LobbyEntry.cs" />
+    <Compile Include="src\Controllers\NavigationBarDecoder.cs" />
+    <Compile Include="src\Controllers\UserDetails.cs" />
+    <Compile Include="src\Controllers\WindowManager.cs" />
+    <Compile Include="src\Controls\BookmarksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\BookmarksControl.Designer.cs">
+      <DependentUpon>BookmarksControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\CChatControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\CChatControl.Designer.cs">
+      <DependentUpon>CChatControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\ConnectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\ConnectControl.Designer.cs">
+      <DependentUpon>ConnectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\CUserNameControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\CUserNameControl.Designer.cs">
+      <DependentUpon>CUserNameControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\NavBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\NavBarControl.Designer.cs">
+      <DependentUpon>NavBarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\ObjectMoveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\ObjectMoveControl.Designer.cs">
+      <DependentUpon>ObjectMoveControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\StatusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\StatusControl.Designer.cs">
+      <DependentUpon>StatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\TextureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\TextureControl.Designer.cs">
+      <DependentUpon>TextureControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\ToolbarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\ToolbarControl.Designer.cs">
+      <DependentUpon>ToolbarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\View3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\View3D.Designer.cs">
+      <DependentUpon>View3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\AssetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\AssetsForm.Designer.cs">
+      <DependentUpon>AssetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\BuildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\BuildForm.Designer.cs">
+      <DependentUpon>BuildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\ChatForm.Designer.cs">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\DebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\DebugForm.Designer.cs">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\DToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\DToolForm.Designer.cs">
+      <DependentUpon>DToolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\ImageUploader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\ImageUploader.Designer.cs">
+      <DependentUpon>ImageUploader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\InfoOverlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\InfoOverlayForm.Designer.cs">
+      <DependentUpon>InfoOverlayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\LinkerConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\LinkerConfigForm.Designer.cs">
+      <DependentUpon>LinkerConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\LobbyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\LobbyForm.Designer.cs">
+      <DependentUpon>LobbyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MapForm.Designer.cs">
+      <DependentUpon>MapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\ProductInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\ProductInfoForm.Designer.cs">
+      <DependentUpon>ProductInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\ShaderEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\ShaderEditorForm.Designer.cs">
+      <DependentUpon>ShaderEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\TeleporterConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\TeleporterConfigForm.Designer.cs">
+      <DependentUpon>TeleporterConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\TermsOfService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\TermsOfService.Designer.cs">
+      <DependentUpon>TermsOfService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\UserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\UserInfoForm.Designer.cs">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\UserStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\UserStatusForm.Designer.cs">
+      <DependentUpon>UserStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Handlers\MAvatarHandler.cs" />
+    <Compile Include="src\Handlers\MCameraHandler.cs" />
+    <Compile Include="src\Handlers\MDeleteHandler.cs" />
+    <Compile Include="src\Handlers\MGnomonHandler.cs" />
+    <Compile Include="src\Handlers\MKeyboardHandler.cs" />
+    <Compile Include="src\Handlers\MLightHandler.cs" />
+    <Compile Include="src\Handlers\MMouseHandler.cs" />
+    <Compile Include="src\Handlers\MMoveHandler.cs" />
+    <Compile Include="src\Handlers\MNavigationPointer.cs" />
+    <Compile Include="src\Handlers\MPropertyChangeHandler.cs" />
+    <Compile Include="src\Handlers\MSpawnHandler.cs" />
+    <Compile Include="src\Handlers\MTeleportHandler.cs" />
+    <Compile Include="src\Handlers\MTextureHandler.cs" />
+    <Compile Include="src\MBuildingBlock.cs" />
+    <Compile Include="src\MBuildParts.cs" />
+    <Compile Include="src\Models\ChatUser.cs" />
+    <Compile Include="src\Services\ImageUploadService.cs" />
+    <Compile Include="src\Services\MBuildCheckService.cs" />
+    <Compile Include="src\Services\ThemeService.cs" />
+    <Compile Include="src\Widgets\MLinkerWidget.cs" />
+    <Compile Include="src\Widgets\MPictureWidget.cs" />
+    <Compile Include="src\Widgets\MStatusWidget.cs" />
+    <Compile Include="src\Widgets\MTeleporterWidget.cs" />
+    <Compile Include="Version.cs" />
+    <EmbeddedResource Include="src\Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="src\Controls\BookmarksControl.resx">
+      <DependentUpon>BookmarksControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\CChatControl.resx">
+      <DependentUpon>CChatControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\ConnectControl.resx">
+      <DependentUpon>ConnectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\CUserNameControl.resx">
+      <DependentUpon>CUserNameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\NavBarControl.resx">
+      <DependentUpon>NavBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\ObjectMoveControl.resx">
+      <DependentUpon>ObjectMoveControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\StatusControl.resx">
+      <DependentUpon>StatusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\TextureControl.resx">
+      <DependentUpon>TextureControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\ToolbarControl.resx">
+      <DependentUpon>ToolbarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\AssetsForm.resx">
+      <DependentUpon>AssetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\BuildForm.resx">
+      <DependentUpon>BuildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\ChatForm.resx">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\DebugForm.resx">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\DToolForm.resx">
+      <DependentUpon>DToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\ImageUploader.resx">
+      <DependentUpon>ImageUploader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\InfoOverlayForm.resx">
+      <DependentUpon>InfoOverlayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\LinkerConfigForm.resx">
+      <DependentUpon>LinkerConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\LobbyForm.resx">
+      <DependentUpon>LobbyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MapForm.resx">
+      <DependentUpon>MapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\ProductInfoForm.resx">
+      <DependentUpon>ProductInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\ShaderEditorForm.resx">
+      <DependentUpon>ShaderEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\TeleporterConfigForm.resx">
+      <DependentUpon>TeleporterConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\TermsOfService.resx">
+      <DependentUpon>TermsOfService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\UserInfoForm.resx">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\UserStatusForm.resx">
+      <DependentUpon>UserStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packrelease.bat" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Massive2\Massive2.csproj">
+      <Project>{f997dfc2-b75c-4871-beda-cd4711066019}</Project>
+      <Name>Massive2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MassiveNetwork\MassiveNetwork.csproj">
+      <Project>{81395f7c-9bec-4a66-ba15-55bc628a0a82}</Project>
+      <Name>MassiveNetwork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assimp64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sun.ico" />
+    <Content Include="Constitution.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Terms.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserData\Cache\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

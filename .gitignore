@@ -26,3 +26,4 @@ dlls/64Andres
 .vs/*
 .vs/**
 .vs
+*.dll
